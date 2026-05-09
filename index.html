@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publisher Catalogue — PT Universe Extraordinary Quark</title>
+  <meta name="description" content="Official e-book catalogue of PT Universe Extraordinary Quark. Science, leadership, wellness, and more.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink: #1a1a2e; --paper: #f5f0e8; --accent: #2d6a4f; --gold: #b5883e; --muted: #8a8070; --card-bg: #ede8dc; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); min-height: 100vh; }
+    header { padding: 24px 48px; border-bottom: 1px solid #d4c9b0; display: flex; justify-content: space-between; align-items: center; }
+    .pub-name { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--ink); margin-bottom: 4px; }
+    .pub-tagline { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+    .header-right { text-align: right; font-size: 11px; color: var(--muted); line-height: 1.8; }
+    .header-right a { color: var(--muted); text-decoration: none; }
+    .header-right a:hover { color: var(--accent); }
+    .hero-section { max-width: 960px; margin: 56px auto 48px; padding: 0 48px; border-left: 3px solid var(--gold); }
+    .hero-section h1 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 400; color: var(--ink); margin-bottom: 12px; line-height: 1.2; }
+    .hero-section p { font-size: 15px; color: var(--muted); font-weight: 300; line-height: 1.7; max-width: 560px; }
+    .filter-row { max-width: 960px; margin: 0 auto 40px; padding: 0 48px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .filter-btn { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border: 1px solid #d4c9b0; background: transparent; color: var(--muted); cursor: pointer; transition: all 0.2s; }
+    .filter-btn.active, .filter-btn:hover { border-color: var(--accent); color: var(--accent); background: #e8f0ec; }
+    .catalogue { max-width: 960px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .book-card { background: var(--card-bg); display: flex; gap: 24px; padding: 24px; transition: box-shadow 0.2s; text-decoration: none; color: inherit; border-bottom: 2px solid transparent; }
+    .book-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); border-bottom-color: var(--gold); }
+    .card-cover { flex-shrink: 0; width: 90px; }
+    .card-cover img { width: 100%; border-radius: 2px; box-shadow: 4px 6px 16px rgba(0,0,0,0.15); }
+    .card-info { flex: 1; }
+    .card-imprint { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 4px; line-height: 1.3; }
+    .card-subtitle { font-size: 12px; color: var(--muted); font-style: italic; margin-bottom: 10px; }
+    .card-meta { display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+    .card-meta span { font-size: 10px; letter-spacing: 1px; color: var(--muted); background: #d4c9b0; padding: 2px 8px; }
+    .card-price { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--accent); margin-bottom: 12px; }
+    .card-btn { display: inline-block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 5px 14px; text-decoration: none; transition: all 0.2s; }
+    .card-btn:hover { background: var(--accent); color: #fff; }
+    .contact-strip { max-width: 960px; margin: 64px auto 0; padding: 32px 48px; border-top: 1px solid #d4c9b0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .contact-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .contact-value { font-size: 14px; color: var(--ink); }
+    .contact-value a { color: var(--accent); text-decoration: none; }
+    .contact-right { text-align: right; font-size: 12px; color: var(--muted); line-height: 2; }
+    footer { border-top: 1px solid #d4c9b0; padding: 24px 48px; text-align: center; font-size: 11px; color: var(--muted); margin-top: 32px; letter-spacing: 1px; }
+    @media (max-width: 680px) {
+      header { padding: 20px 24px; flex-direction: column; gap: 12px; text-align: center; }
+      .header-right { text-align: center; }
+      .hero-section { padding: 0 24px; margin: 40px auto 32px; }
+      .hero-section h1 { font-size: 28px; }
+      .filter-row { padding: 0 24px; }
+      .catalogue { grid-template-columns: 1fr; padding: 0 24px; }
+      .contact-strip { padding: 32px 24px; flex-direction: column; }
+      .contact-right { text-align: left; }
+      footer { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <div class="pub-name">PT Universe Extraordinary Quark</div>
+    <div class="pub-tagline">Official Publisher Catalogue</div>
+  </div>
+  <div class="header-right">
+    Jakarta Selatan, DKI Jakarta, Indonesia<br>
+    <a href="mailto:povmedia@versx.tech">povmedia@versx.tech</a><br>
+    <a href="https://versx.tech">versx.tech</a> · Telegram: <a href="https://t.me/VersXhub">@VersXhub</a>
+  </div>
+</header>
+<section class="hero-section">
+  <h1>Our E-Book Catalogue</h1>
+  <p>Titles spanning science, leadership, wellness, and beyond — published under PT Universe Extraordinary Quark and its imprints.</p>
+</section>
+<div class="filter-row">
+  <button class="filter-btn active">All</button>
+  <button class="filter-btn">Bahasa Indonesia</button>
+  <button class="filter-btn">English</button>
+  <button class="filter-btn">Spacefinity Horizon</button>
+  <button class="filter-btn">Aetherium Horizon</button>
+</div>
+<main class="catalogue">
+  <a href="/complexity-science" class="book-card">
+    <div class="card-cover"><img src="https://public-files.gumroad.com/t47qgs1jbw3tjb4p8v278gbmynzn" alt="Rahasia cover"></div>
+    <div class="card-info">
+      <div class="card-imprint">Spacefinity Horizon</div>
+      <div class="card-title">RAHASIA</div>
+      <div class="card-subtitle">Complexity Science dan Cara Dunia Benar-Benar Bekerja</div>
+      <div class="card-meta"><span>Bahasa Indonesia</span><span>147 halaman</span><span>PDF</span></div>
+      <div class="card-price">Rp 88.000</div>
+      <span class="card-btn">Lihat Detail →</span>
+    </div>
+  </a>
+  <a href="/remote-work-playbook" class="book-card">
+    <div class="card-cover"><img src="https://public-files.gumroad.com/sz4eeixel3lm0hhxlbo370zt4oe9" alt="Remote Work Playbook cover"></div>
+    <div class="card-info">
+      <div class="card-imprint">Spacefinity Horizon</div>
+      <div class="card-title">Remote Work Playbook</div>
+      <div class="card-subtitle">Your Complete Guide to Working Smarter</div>
+      <div class="card-meta"><span>English</span><span>650 pages</span><span>PDF</span></div>
+      <div class="card-price">Rp 99.000</div>
+      <span class="card-btn">View Detail →</span>
+    </div>
+  </a>
+  <a href="/remote-work-leadership" class="book-card">
+    <div class="card-cover"><img src="https://public-files.gumroad.com/mera1jh6c8qr4n736d74jl8c4wjo" alt="Remote Work Leadership cover"></div>
+    <div class="card-info">
+      <div class="card-imprint">Spacefinity Horizon</div>
+      <div class="card-title">Remote Work Leadership</div>
+      <div class="card-subtitle">The Complete Playbook for Remote Leadership Excellence</div>
+      <div class="card-meta"><span>English</span><span>906 pages</span><span>PDF</span></div>
+      <div class="card-price">Rp 99.000</div>
+      <span class="card-btn">View Detail →</span>
+    </div>
+  </a>
+  <a href="/before-i-do" class="book-card">
+    <div class="card-cover"><img src="https://public-files.gumroad.com/i2591fjfk33srsnolhzq9von5s2o" alt="Before I Do cover"></div>
+    <div class="card-info">
+      <div class="card-imprint">Aetherium Horizon</div>
+      <div class="card-title">Before "I Do"</div>
+      <div class="card-subtitle">Building Wholeness for Love That Lasts</div>
+      <div class="card-meta"><span>English</span><span>677 pages</span><span>PDF</span></div>
+      <div class="card-price">Rp 69.000</div>
+      <span class="card-btn">View Detail →</span>
+    </div>
+  </a>
+</main>
+<div class="contact-strip">
+  <div class="contact-left">
+    <div class="contact-label">Contact & Support</div>
+    <div class="contact-value">
+      <a href="mailto:povmedia@versx.tech">povmedia@versx.tech</a> · Telegram: <a href="https://t.me/VersXhub">@VersXhub</a>
+    </div>
+  </div>
+  <div class="contact-right">
+    PT Universe Extraordinary Quark<br>
+    Jakarta Selatan, DKI Jakarta, Indonesia<br>
+    <a href="https://versx.tech" style="color: var(--muted); text-decoration: none;">versx.tech</a>
+  </div>
+</div>
+<footer>© 2026 PT Universe Extraordinary Quark · All Rights Reserved</footer>
+</body>
+</html>
