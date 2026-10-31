@@ -3,7 +3,7 @@
 
   // ===== PENGATURAN =====================================================
   // Saat go-live: ubah ENV menjadi "production" dan isi Client Key Production.
-  var ENV = "sandbox";
+  var ENV = "production";
 
   // Client Key aman ditaruh di halaman web (Server Key JANGAN pernah).
   var CLIENT_KEY = {
