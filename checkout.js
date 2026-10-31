@@ -31,7 +31,7 @@
       invalid: "Please enter your name and a valid email address.",
       success:
         "Payment received. Your e-book link is on its way to your email (please also check your spam folder).",
-      pending: "Waiting for your payment to be completed.",
+      pending: "Your payment is being processed. If you have already paid, your e-book link will be emailed to you within a few minutes (please also check your spam folder).",
       failed: "Payment failed. Please try again.",
       closed:
         "The payment window was closed. You can try again whenever you are ready.",
@@ -46,7 +46,7 @@
       invalid: "Mohon isi nama dan alamat email yang valid.",
       success:
         "Pembayaran diterima. Link e-book sedang dikirim ke email Anda (cek juga folder spam).",
-      pending: "Menunggu pembayaran Anda diselesaikan.",
+      pending: "Pembayaran sedang diproses. Jika Anda sudah membayar, link e-book akan dikirim ke email Anda dalam beberapa menit (cek juga folder spam).",
       failed: "Pembayaran gagal. Silakan coba lagi.",
       closed:
         "Jendela pembayaran ditutup. Anda bisa mencobanya lagi kapan saja.",
